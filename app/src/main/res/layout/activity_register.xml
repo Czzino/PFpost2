@@ -4,56 +4,57 @@
     android:layout_height="match_parent">
 
     <EditText
-        android:id="@+id/et1"
+        android:id="@+id/et_id"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:hint="아이디"/>
     <Button
-        android:id="@+id/btn1"
+        android:id="@+id/btn_validate"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="중복확인"
-        android:layout_toRightOf="@+id/et1"
+        android:layout_toRightOf="@+id/et_id"
         android:onClick="clickCheck"/>
     <EditText
-        android:id="@+id/et2"
+        android:id="@+id/et_password"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:layout_below="@+id/et1"
+        android:layout_below="@+id/et_id"
         android:hint="패스워드"/>
     <EditText
-        android:id="@+id/et3"
+        android:id="@+id/et_pwcheck"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:layout_below="@+id/et2"
+        android:layout_below="@+id/et_password"
         android:hint="패스워드 확인"/>
     <EditText
-        android:id="@+id/et4"
+        android:id="@+id/et_name"
         android:layout_width="210dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="5dp"
-        android:layout_below="@+id/et3"
+        android:layout_below="@+id/et_pwcheck"
         android:hint="이름"/>
     <EditText
-        android:id="@+id/et5"
+        android:id="@+id/et_age"
         android:layout_width="210dp"
         android:layout_marginTop="5dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_below="@+id/et4"
+        android:layout_below="@+id/et_name"
         android:hint="나이"/>
 
     <Button
+        android:id="@+id/btn_register"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="회원가입"
-        android:layout_below="@+id/et5"
+        android:layout_below="@+id/et_age"
         android:layout_marginTop="15dp"
         android:onClick="clickJoin"/>
 

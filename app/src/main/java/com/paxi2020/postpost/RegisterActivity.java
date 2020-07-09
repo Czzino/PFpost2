@@ -1,141 +1,100 @@
 package com.paxi2020.postpost;
 
-import android.content.Intent;
+import android.Manifest;
+import android.app.ProgressDialog;
+import android.content.pm.PackageManager;
+import android.os.AsyncTask;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.android.volley.Request;
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
-
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.OutputStreamWriter;
+import java.net.URL;
+import java.net.URLConnection;
+import java.net.URLEncoder;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText et_id, et_password, et_pwcheck, et_name, et_age;
-    Button btnJoin, btnCheck;
-    AlertDialog.Builder dialog;
-    boolean validate=false;
+    EditText et_userid, et_pw, et_name;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        et_id=findViewById(R.id.et_id);
-        et_password=findViewById(R.id.et_password);
-        et_pwcheck=findViewById(R.id.et_pwcheck);
-        et_name=findViewById(R.id.et_name);
-        et_age=findViewById(R.id.et_age);
+        et_userid = findViewById(R.id.et_id);
+        et_pw = findViewById(R.id.et_password);
+        et_name = findViewById(R.id.et_name);
 
-        btnCheck=findViewById(R.id.btn_validate);
-        btnJoin=findViewById(R.id.btn_register);
 
-        btnCheck.setOnClickListener(new View.OnClickListener() { //중복체크
+    }
+    public void clickJoin(View view) {
+        String id = et_userid.getText().toString();
+        String pw = et_pw.getText().toString();
+        String name = et_userid.getText().toString();
+        insertoToDatabase(id, pw);
+    }
+    private void insertoToDatabase(String Id, String Pw) {
+        class InsertData extends AsyncTask<String, Void, String> {
+            ProgressDialog loading;
             @Override
-            public void onClick(View v) {
-                //아이디 입력을 듣는 리스너 입력된값이  중복체크
-                String id= et_id.getText().toString();
-                //중복이 안됐을때
-                if(validate){
-                    return;
-                }
-                //빈칸일 떄
-                if(id.equals("")){
-                    AlertDialog.Builder builder= new AlertDialog.Builder(RegisterActivity.this);
-                    builder.setMessage("아이디는 빈칸일수 없습니다").setPositiveButton("확인",null).create().show();
-                    return;
-                }else {
-                    AlertDialog.Builder builder=new AlertDialog.Builder(RegisterActivity.this);
-                    builder.setMessage("사용가능합니다").setPositiveButton("확인",null).create().show();
-
-                }
-
-                //Volley에 등록된 Reponse 리스너 이용
-                Response.Listener<String> responseListener= new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-
-                        try {
-                            JSONObject jsonResponse= new JSONObject(response);
-                            //인터넷 연결작업은 거의 try catch 상황
-                            boolean success= jsonResponse.getBoolean("success");
-                            if(success){
-                                AlertDialog.Builder builder= new AlertDialog.Builder(RegisterActivity.this);
-                                builder.setMessage("아이디를 사용하실수 있습니다").setPositiveButton("확인",null).create().show();
-                                et_id.setEnabled(false);
-                                validate=true;
-                                btnCheck.setText("확인");
-                            }else{
-                                AlertDialog.Builder builder= new AlertDialog.Builder(RegisterActivity.this);
-                                builder.setMessage("사용할수 없는 아이디 입니다").setPositiveButton("확인",null).create().show();
-
-
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-
-                    }
-                };
-
-                UserCheckRequest userCheckRequest= new UserCheckRequest(id,responseListener);
-                RequestQueue queue= Volley.newRequestQueue(RegisterActivity.this);
-                queue.add(userCheckRequest);
+            protected void onPreExecute() {
+                super.onPreExecute();
+                loading = ProgressDialog.show(RegisterActivity.this, "Please Wait", null, true, true);
             }
-        });
-
-        //회원가입을 눌렀을때 발동하는 리스너
-       btnJoin.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                //editText에 입력되어있는 값을 get(가져온다)해온다
-                String id=et_id.getText().toString();
-                final String password=et_password.getText().toString();
-                String name=et_name.getText().toString();
-                int age=Integer.parseInt(et_age.getText().toString());
+            protected void onPostExecute(String s) {
+                super.onPostExecute(s);
+                loading.dismiss();
+                Toast.makeText(getApplicationContext(), s, Toast.LENGTH_LONG).show();
+            }
+            @Override
+            protected String doInBackground(String... params) {
 
-                final String pwcheck=et_pwcheck.getText().toString();
+                try {
+                    String Id = (String) params[0];
+                    String Pw = (String) params[1];
 
-                Response.Listener<String> responseListener=new Response.Listener<String>() {//volley
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jasonObject=new JSONObject(response);//Register2 php에 response
-                            boolean success=jasonObject.getBoolean("success");//Register2 php에 sucess
-                            if(password.equals(pwcheck)) {
-                                if (success) {//회원등록 성공한 경우
-                                    Toast.makeText(getApplicationContext(), "회원 등록 성공", Toast.LENGTH_SHORT).show();
-                                    Intent intent = new Intent(RegisterActivity.this, LoginActivity.class);
-                                    startActivity(intent);
-                                }
-                            }
-                            else{//회원등록 실패한 경우
-                                Toast.makeText(getApplicationContext(),"회원 등록 실패",Toast.LENGTH_SHORT).show();
-                                return;
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
+                    String link = "http://fvwlharu.dothome.co.kr/Atom.php";
+                    String data = URLEncoder.encode("Id", "UTF-8") + "=" + URLEncoder.encode(Id, "UTF-8");
+                    data += "&" + URLEncoder.encode("Pw", "UTF-8") + "=" + URLEncoder.encode(Pw, "UTF-8");
+
+                    URL url = new URL(link);
+                    URLConnection conn = url.openConnection();
+
+                    conn.setDoOutput(true);
+                    OutputStreamWriter wr = new OutputStreamWriter(conn.getOutputStream());
+
+                    wr.write(data);
+                    wr.flush();
+
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(conn.getInputStream()));
+
+                    StringBuilder sb = new StringBuilder();
+                    String line = null;
+
+                    // Read Server Response
+                    while ((line = reader.readLine()) != null) {
+                        sb.append(line);
+                        break;
                     }
-                };
-                //서버로 volley를 이용해서 요청을 함
-                UserJoinRequest registerRequest=new UserJoinRequest(id,password, name, age,responseListener);
-                RequestQueue queue= Volley.newRequestQueue(RegisterActivity.this);
-                queue.add(registerRequest);
-
+                    return sb.toString();
+                } catch (Exception e) {
+                    return new String("Exception: " + e.getMessage());
+                }
+            }
+        }
+        InsertData task = new InsertData();
+        task.execute(Id, Pw);
     }
-
-       });
-    }
-
 }

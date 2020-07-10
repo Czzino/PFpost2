@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:contentPadding="15dp"
+    android:background="#00000000">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:text="Name"
+            android:layout_margin="8dp"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:gravity="bottom"
+            android:textColor="#FF000000" />
+
+        <TextView
+            android:id="@+id/tv_rannum"
+            android:layout_width="120dp"
+            android:layout_height="50dp"
+            android:text="00000000"
+            android:textColor="#504848"
+            android:layout_margin="8dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="bottom"
+            android:layout_toRightOf="@+id/tv_name"/>
+    <TextView
+        android:id="@+id/tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="화요일2020.05.26"
+        android:textStyle="bold"
+        android:textSize="20sp"
+        android:layout_toRightOf="@id/tv_rannum"
+        android:gravity="bottom"
+        android:layout_alignBottom="@+id/tv_rannum"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="물품이름과 요청사항"
+        android:layout_margin="8dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_below="@+id/tv_name"/>
+
+
+
+
+</RelativeLayout>

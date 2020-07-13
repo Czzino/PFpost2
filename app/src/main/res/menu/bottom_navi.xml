@@ -3,15 +3,15 @@
 
     <item android:id="@+id/menu_lookpost"
         android:title="배송조회"
-        android:icon="@android:drawable/ic_menu_camera"/>
+        android:icon="@drawable/look"/>
     <item android:id="@+id/menu_shopping"
         android:title="쇼핑몰"
-        android:icon="@android:drawable/ic_menu_delete"/>
+        android:icon="@drawable/shopping"/>
     <item android:id="@+id/menu_searchpost"
         android:title="택배조회"
-        android:icon="@android:drawable/ic_menu_gallery"/>
+        android:icon="@drawable/search"/>
     <item android:id="@+id/menu_booking"
         android:title="택배예약"
-        android:icon="@android:drawable/ic_dialog_dialer">
+        android:icon="@drawable/booking">
 </item>
 </menu>

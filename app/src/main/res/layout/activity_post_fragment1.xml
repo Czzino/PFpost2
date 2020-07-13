@@ -6,10 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".PostFragment1">
 
-    <TextView
-        android:id="@+id/tv"
+    <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="text"/>
+        android:layout_height="wrap_content"
+        android:id="@+id/recycler"/>
 
 </RelativeLayout>

@@ -1,15 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".PostFragment1">
-
+    
     <TextView
-        android:id="@+id/tv"
+        android:id="@+id/tv_send"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:text="보내는분"
+        android:textStyle="bold"
+        android:textColor="#4E5554"
+        android:textSize="25sp"/>
+    <RelativeLayout
+        android:id="@+id/rela1"
+        android:layout_below="@+id/tv_send"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="text"/>
+        android:background="@drawable/shape_line">
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="140dp"
+        android:layout_height="50dp"
+        android:textColor="#F16B23"
+        android:textSize="25sp"
+        android:text="이 름"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"/>
 
-</LinearLayout>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/name"
+
+</RelativeLayout>
+
+</RelativeLayout>

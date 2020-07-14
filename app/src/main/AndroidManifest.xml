@@ -15,13 +15,13 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainFragment1"></activity>
+        <activity android:name=".ResultPost2"></activity>
+        <activity android:name=".MainFragment1" />
         <activity android:name=".PostFragment1" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainActivity" />
         <activity android:name=".IntroActivity">
-
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

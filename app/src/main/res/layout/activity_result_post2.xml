@@ -1,0 +1,476 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    tools:context=".ResultPost2">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFAAAAAA"
+        android:layout_alignParentBottom="true"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFAAAAAA"
+        android:layout_alignParentBottom="true"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFAAAAAA"
+        android:layout_alignParentBottom="true"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFAAAAAA"
+        android:layout_alignParentBottom="true"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFAAAAAA"
+        android:layout_alignParentBottom="true"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFAAAAAA"
+        android:layout_alignParentBottom="true"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#FFAAAAAA"
+        android:layout_alignParentBottom="true"/>
+
+    <TextView
+        android:id="@+id/tv_information1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기본정보"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:textColor="#FF000000"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rela1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_line"
+        android:layout_below="@+id/tv_information1">
+
+
+        <TextView
+            android:id="@+id/tv_company"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="택배사"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#96A6A4"/>
+        <TextView
+            android:id="@+id/tv_company_val"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/tv_company"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="CJ 대한통운"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FF000000"/>
+
+        <View
+            android:layout_width="350dp"
+            android:layout_height="1dp"
+            android:layout_centerHorizontal="true"
+            android:layout_margin=""
+            android:background="#FFAAAAAA"
+
+            android:layout_below="@+id/tv_company"/>
+
+        <TextView
+            android:id="@+id/tv_company2"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="송장번호"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_company"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#96A6A4"/>
+        <TextView
+            android:id="@+id/tv_company2_val"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/tv_company2"
+            android:layout_below="@+id/tv_company_val"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="6487194020"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FF000000"/>
+        <TextView
+            android:id="@+id/tv_company3"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="상품정보"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_company2"
+            android:textSize="18sp"
+            android:textColor="#96A6A4"/>
+        <TextView
+            android:id="@+id/tv_company_val3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/tv_company3"
+            android:layout_below="@+id/tv_company2"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="일회용 마스크 50매"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FF000000"/>
+        <TextView
+            android:id="@+id/tv_company4"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="보내는 분"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_below="@+id/tv_company_val3"
+            android:textSize="18sp"
+            android:textColor="#96A6A4"/>
+        <TextView
+            android:id="@+id/tv_company_val4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_company4"
+            android:layout_below="@+id/tv_company_val3"
+            android:textSize="20sp"
+            android:text="강희수"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FF000000"/>
+
+        <TextView
+            android:id="@+id/tv_company5"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="받는 분"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_company4"
+            android:textSize="18sp"
+            android:textColor="#96A6A4"/>
+        <TextView
+            android:id="@+id/tv_company_val5"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_company4"
+            android:layout_below="@+id/tv_company_val4"
+            android:textSize="20sp"
+            android:text="이상철"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="#F0F1F1"
+            android:textColor="#FF000000"/>
+
+
+
+    </RelativeLayout>
+
+<!--    <TextView-->
+<!--    android:id="@+id/tv_information"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    android:text="기본정보"-->
+<!--    android:textStyle="bold"-->
+<!--    android:textColor="#FF000000"-->
+<!--    android:textSize="20sp"-->
+<!--    android:layout_marginLeft="10dp"/>-->
+
+<!--    <RelativeLayout-->
+<!--        android:id="@+id/rela1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="vertical"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        android:background="@drawable/shape_line"-->
+<!--        android:layout_below="@+id/tv_information">-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_company"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:text="택배사"-->
+<!--            android:layout_marginTop="5dp"-->
+<!--            android:gravity="center"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="#96A6A4"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_company_value"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_toRightOf="@+id/tv_company"-->
+<!--            android:textSize="20sp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:text="CJ대한통운"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:textColor="#FF000000"/>-->
+
+<!--        <View-->
+<!--            android:layout_width="350dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:background="#FFAAAAAA"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_below="@+id/tv_company"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_number"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:text="송장번호"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_below="@+id/tv_company"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="#96A6A4"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_number_value"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_toRightOf="@+id/tv_company"-->
+<!--            android:layout_below="@+id/tv_company_value"-->
+<!--            android:textSize="20sp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:text="0108374721"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:textColor="#FF000000"/>-->
+<!--        <View-->
+<!--            android:layout_width="350dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:background="#FFAAAAAA"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_below="@+id/tv_number"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_boxinfo"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:text="상품정보"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_below="@+id/tv_number_value"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="#96A6A4"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_boxinfo_value"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_toRightOf="@+id/tv_company"-->
+<!--            android:layout_below="@+id/tv_number_value"-->
+<!--            android:textSize="20sp"-->
+<!--            android:text="일회용 마스크 50매"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:textColor="#FF000000"/>-->
+<!--        <View-->
+<!--            android:layout_width="350dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:background="#FFAAAAAA"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_below="@+id/tv_boxinfo"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_name"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:text="보내는 사람"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_below="@+id/tv_boxinfo"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="#96A6A4"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_name_value"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_toRightOf="@+id/tv_company"-->
+<!--            android:layout_below="@+id/tv_boxinfo_value"-->
+<!--            android:textSize="20sp"-->
+<!--            android:text="김희수"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:textColor="#FF000000"/>-->
+<!--        <View-->
+<!--            android:layout_width="350dp"-->
+<!--            android:layout_height="1dp"-->
+<!--            android:background="#FFAAAAAA"-->
+<!--            android:layout_marginLeft="10dp"-->
+<!--            android:layout_below="@+id/tv_name"/>-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/tv_name2"-->
+<!--            android:layout_width="100dp"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:text="받는사람"-->
+<!--            android:gravity="center"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_below="@+id/tv_name"-->
+<!--            android:textSize="18sp"-->
+<!--            android:textColor="#96A6A4"/>-->
+<!--        <TextView-->
+<!--            android:id="@+id/tv_name2_value"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="30dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_toRightOf="@+id/tv_company"-->
+<!--            android:layout_below="@+id/tv_name_value"-->
+<!--            android:textSize="20sp"-->
+<!--            android:layout_marginBottom="10dp"-->
+<!--            android:text="박성환"-->
+<!--            android:layout_marginLeft="15dp"-->
+<!--            android:textColor="#FF000000"/>-->
+
+    <TextView
+        android:id="@+id/tv_information2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="기본정보"
+        android:layout_marginTop="20dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/rela1"
+        android:textColor="#FF000000"
+        android:textSize="20sp"
+        android:layout_marginLeft="10dp"/>
+
+
+    <RelativeLayout
+        android:id="@+id/rela2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/shape_line"
+        android:layout_below="@+id/tv_information2">
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="처리일시"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#96A6A4"/>
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/tv_date"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="상품상태"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FF000000"/>
+
+        <TextView
+            android:id="@+id/tv_date2"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="date"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_date"
+            android:gravity="center"
+            android:textSize="18sp"
+            android:textColor="#96A6A4"/>
+        <TextView
+            android:id="@+id/tv_text2"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/tv_date"
+            android:layout_below="@+id/tv_text"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="상품을 인수하였습니다"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FF000000"/>
+        <TextView
+            android:id="@+id/tv_date3"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="date2"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_date2"
+            android:textSize="18sp"
+            android:textColor="#96A6A4"/>
+        <TextView
+            android:id="@+id/tv_text3"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_toRightOf="@+id/tv_date3"
+            android:layout_below="@+id/tv_text2"
+            android:textSize="20sp"
+            android:layout_marginTop="10dp"
+            android:text="상품이 이동중 입니다"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FF000000"/>
+        <TextView
+            android:id="@+id/tv_date4"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="date3"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:layout_below="@+id/tv_date3"
+            android:textSize="18sp"
+            android:textColor="#96A6A4"/>
+        <TextView
+            android:id="@+id/tv_text4"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_date4"
+            android:layout_below="@+id/tv_text3"
+            android:textSize="20sp"
+            android:text="배송이 출발했습니다"
+            android:layout_marginLeft="15dp"
+            android:textColor="#FF000000"/>
+
+        <TextView
+            android:id="@+id/date5"
+            android:layout_width="100dp"
+            android:layout_height="30dp"
+            android:text="보내는 사람"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/tv_date4"
+            android:textSize="18sp"
+            android:textColor="#96A6A4"/>
+        <TextView
+            android:id="@+id/text5"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/tv_date4"
+            android:layout_below="@+id/tv_text4"
+            android:textSize="20sp"
+            android:text="상품이 도착했습니다"
+            android:layout_marginLeft="15dp"
+            android:layout_marginBottom="15dp"
+            android:background="#F0F1F1"
+            android:textColor="#FF000000"/>
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+</RelativeLayout>

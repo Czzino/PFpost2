@@ -1,5 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string-array name="택배선택"/>
-    <item>주만통운</item>
+    <string-array name="arrays">
+
+    <item>CJ 대한통운</item>
+    <item>CU 편의점택배</item>
+    <item>GS Post 택배</item>
+    <item>우체국 택배</item>
+    <item>한진택배</item>
+    <item>경동택배</item>
+    <item>로젠택배</item>
+    <item>롯데택배</item>
+
+    </string-array>
 </resources>

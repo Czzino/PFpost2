@@ -27,11 +27,11 @@ public class PostFragment2 extends Fragment {
         return view;
     }
 
-    public void spinnerAdapter(){
-
-        arrayAdapter= ArrayAdapter.createFromResource(this,R.array.arrays, android.R.layout.simple_spinner_dropdown_item);
-
-        spn.setAdapter(arrayAdapter);
-
-    }
+//    public void spinnerAdapter(){
+//
+//        arrayAdapter= ArrayAdapter.createFromResource(,R.array.arrays, android.R.layout.simple_spinner_dropdown_item);
+//
+//        spn.setAdapter(arrayAdapter);
+//
+//    }
 }

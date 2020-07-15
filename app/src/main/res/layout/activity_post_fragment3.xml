@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding=""
+    android:padding="5dp"
     tools:context=".PostFragment1">
 
     <RelativeLayout
@@ -78,7 +78,7 @@
             android:layout_toRightOf="@+id/tv_hmall"
             android:layout_marginTop="20dp"
             android:layout_below="@+id/btn_llst"
-            android:background="@drawable/ic_home_blue_24dp"
+            android:background="@drawable/ic_home_blue_24dp"/>
         <ImageView
             android:id="@+id/iv_sinsaegye"
             android:layout_width="100dp"
@@ -114,7 +114,7 @@
             android:layout_below="@+id/btn_hmall"
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@+id/tv_llst"
-            android:background="@drawable/ic_home_blue_24dp"
+            android:background="@drawable/ic_home_blue_24dp"/>
         <ImageView
             android:id="@+id/iv_lotte"
             android:layout_width="100dp"
@@ -150,7 +150,7 @@
             android:layout_below="@+id/btn_sinsaegye"
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@+id/tv_llst"
-            android:background="@drawable/ic_home_blue_24dp"
+            android:background="@drawable/ic_home_blue_24dp"/>
         <ImageView
             android:id="@+id/iv_auction"
             android:layout_width="100dp"
@@ -186,7 +186,7 @@
             android:layout_below="@+id/btn_lotte"
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@+id/tv_auction"
-            android:background="@drawable/ic_home_blue_24dp"
+            android:background="@drawable/ic_home_blue_24dp"/>
 
 
 </RelativeLayout>

@@ -18,5 +18,9 @@ public class PostFragment3 extends Fragment {
 
         View view = inflater.inflate(R.layout.activity_post_fragment3,container,false);
         return view;
+
+//
+//        Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse("http://hyundaihmall.com"));
+////                startActivity(intent);
     }
 }

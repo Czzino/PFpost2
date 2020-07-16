@@ -13,5 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/introac"
-        android:scaleType="center"/>
+        android:adjustViewBounds="true"
+        android:scaleType="fitXY"/>
     </LinearLayout>

@@ -40,39 +40,31 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void clickRegister(View view) {
+
         String id= et_id.getText().toString();
         String pass= et_pw.getText().toString();
         String name= et_name.getText().toString();
         String email= et_email.getText().toString();
 
-        Retrofit retrofit = RegisterHelper.getInstance();
-        RegisterService registerService= retrofit.create(RegisterService.class);
 
-        Map<String,String> datapart= new HashMap<>();
-        datapart.put("userId",id);
-        datapart.put("userPassword", pass);
-        datapart.put("userName",name);
-        datapart.put("userEmail", email);
-
-        Call<String> call= registerService.postRegister(datapart);
-        call.enqueue(new Callback<String>() {
+        RetrofitService retrofitService= RetrofitHelper.getInstance().create(RetrofitService.class);
+        RegisterItem registerItem= new RegisterItem("userId","userPassword","userName","userEmail");
+        Call<RegisterItem> call = retrofitService.postRegister(registerItem);
+        call.enqueue(new Callback<RegisterItem>() {
             @Override
-            public void onResponse(Call<String> call, Response<String> response) {
+            public void onResponse(Call<RegisterItem> call, Response<RegisterItem> response) {
                 if(response.isSuccessful()){
-                    String s= response.body();
-                    Toast.makeText(RegisterActivity.this, "저장되었습니다", Toast.LENGTH_SHORT).show();
+                    RegisterItem item= response.body();
 
-                    Intent intent= new Intent(RegisterActivity.this, LoginActivity.class);
-                    startActivity(intent);
+                    Toast.makeText(RegisterActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
 
                 }
             }
 
             @Override
-            public void onFailure(Call<String> call, Throwable t) {
+            public void onFailure(Call<RegisterItem> call, Throwable t) {
 
             }
         });
-
     }
 }

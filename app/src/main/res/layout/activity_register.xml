@@ -46,6 +46,6 @@
         android:onClick="clickRegister"
         android:layout_centerHorizontal="true"
         android:layout_below="@+id/et_email"
-        android:layout_marginTop="15dp"/>
+        android:layout_marginTop="15dp" />
 
 </RelativeLayout>

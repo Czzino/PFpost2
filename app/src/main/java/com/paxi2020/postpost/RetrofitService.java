@@ -9,6 +9,6 @@ import retrofit2.http.PartMap;
 
 public interface RetrofitService {
 
-    @POST("/Post/Register.php")
-    Call<RegisterItem> postRegister(@Body RegisterItem dataPart);
+//    @POST("/Post/Register.php")
+//    Call<RegisterItem> postRegister(@Body RegisterItem dataPart);
 }

@@ -15,7 +15,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ResultPost2"></activity>
+        <activity android:name=".TabFragment1"></activity>
+        <activity android:name=".ResultPost2" />
         <activity android:name=".PostFragment1" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".RegisterActivity" />

@@ -116,25 +116,17 @@
             android:layout_toRightOf="@id/tv_address"/>
 
 
-        <TextView
-            android:id="@+id/tv_detail"
-            android:layout_width="100dp"
-            android:layout_height="75dp"
-            android:layout_below="@+id/v4"
-            android:textColor="#F16B23"
-            android:textSize="20sp"
-            android:text="요청 사항"
-            android:gravity="center"/>
+
 
         <EditText
-            android:id="@+id/et_detail"
+            android:id="@+id/et_message"
             android:layout_width="match_parent"
             android:layout_height="35dp"
             android:textSize="15sp"
             android:layout_below="@+id/v3"
             android:background="@null"
             android:maxLines="1"
-            android:layout_toRightOf="@id/tv_detail"/>
+            android:layout_toRightOf="@id/tv_message"/>
         <View
             android:id="@+id/v4"
             android:layout_width="match_parent"
@@ -143,15 +135,26 @@
             android:background="#FFAAAAAA"
             android:layout_below="@+id/et_address1_2"/>
 
+        <TextView
+            android:id="@+id/tv_message"
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_below="@+id/v4"
+            android:textColor="#F16B23"
+            android:textSize="20sp"
+            android:text="요청 사항"
+            android:gravity="center"/>
+
         <EditText
-            android:id="@+id/et_detail2"
+            android:id="@+id/et_message2"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="wrap_content"
             android:maxLines="1"
             android:textSize="15sp"
             android:background="@null"
+            android:layout_alignBottom="@+id/tv_message"
             android:layout_below="@+id/et_detail"
-            android:layout_toRightOf="@id/tv_detail"/>
+            android:layout_toRightOf="@id/tv_message"/>
 
     </RelativeLayout>
 

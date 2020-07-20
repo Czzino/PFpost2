@@ -41,30 +41,6 @@ public class RegisterActivity extends AppCompatActivity {
 
     public void clickRegister(View view) {
 
-        String id= et_id.getText().toString();
-        String pass= et_pw.getText().toString();
-        String name= et_name.getText().toString();
-        String email= et_email.getText().toString();
 
-
-        RetrofitService retrofitService= RetrofitHelper.getInstance().create(RetrofitService.class);
-        RegisterItem registerItem= new RegisterItem("userId","userPassword","userName","userEmail");
-        Call<RegisterItem> call = retrofitService.postRegister(registerItem);
-        call.enqueue(new Callback<RegisterItem>() {
-            @Override
-            public void onResponse(Call<RegisterItem> call, Response<RegisterItem> response) {
-                if(response.isSuccessful()){
-                    RegisterItem item= response.body();
-
-                    Toast.makeText(RegisterActivity.this, "회원가입 성공", Toast.LENGTH_SHORT).show();
-
-                }
-            }
-
-            @Override
-            public void onFailure(Call<RegisterItem> call, Throwable t) {
-
-            }
-        });
     }
 }

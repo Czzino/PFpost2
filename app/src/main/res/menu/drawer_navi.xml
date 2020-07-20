@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/home"
+        android:title="HOME"
+        android:icon="@drawable/ic_home_blue_24dp"/>
+
+        <item android:id="@+id/setting"
+            android:title="Setting"
+            android:icon="@drawable/ic_settings_blue_24dp"/>
+
+    <item android:id="@+id/menu_first"
+        android:title="택배사 문의하기"
+        android:icon="@drawable/ic_phone_forwarded_blue_24dp"/>
+
+    <item android:id="@+id/menu_second"
+        android:title="운임 안내"
+        android:icon="@drawable/ic_monetization_on_blue_24dp"/>
+
+
+
+</menu>

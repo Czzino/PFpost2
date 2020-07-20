@@ -1,18 +1,21 @@
 package com.paxi2020.postpost;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
+import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Toast;
 
 
-import com.android.volley.RequestQueue;
-import com.android.volley.Response;
-import com.android.volley.toolbox.Volley;
+import com.bumptech.glide.Glide;
+import com.google.android.material.navigation.NavigationView;
 import com.google.gson.JsonObject;
 
 import org.json.JSONException;
@@ -21,7 +24,13 @@ import org.json.JSONObject;
 public class LoginActivity extends AppCompatActivity {
 
     EditText et_userid, et_pw;
-    Button btn_login, btn_regi;
+    Button btn_login;
+    ImageView iv;
+
+    NavigationView navi;
+    DrawerLayout drawerLayout;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,56 +40,29 @@ public class LoginActivity extends AppCompatActivity {
         et_userid = findViewById(R.id.et_id);
         et_pw = findViewById(R.id.et_password);
 
-        btn_login = findViewById(R.id.btn_login);
-        btn_regi = findViewById(R.id.btn_register);
+        iv=findViewById(R.id.iv);
+        String imgUrl= "https://w7.pngwing.com/pngs/935/151/png-transparent-man-riding-motor-scooter-delivery-courier-express-by-bike-freight-transport-mode-of-transport-motorcycle-thumbnail.png";
+        Glide.with(this).load(imgUrl).into(iv);
 
-        btn_regi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(LoginActivity.this, RegisterActivity.class);
-                startActivity(intent);
-            }
-        });
+        drawerLayout=findViewById(R.id.drawer_layout);
+
+        Toolbar toolbar= (Toolbar)findViewById(R.id.toolbar);
+        toolbar.setTitle("로 그 인");
+        setSupportActionBar(toolbar);
+
+
+
+        btn_login = findViewById(R.id.btn_login);
 
         btn_login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
-                String userID = et_userid.getText().toString();
-                String userPassword = et_pw.getText().toString();
-
-                Response.Listener<String> reponseListener = new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
-                        try {
-                            JSONObject jsonObject = new JSONObject(response);
-                            boolean success = jsonObject.getBoolean("success");
-                            if (success) {
-                                String userID = jsonObject.getString("userID");
-                                String userPassword1 = jsonObject.getString("userPassword");
-                                Toast.makeText(getApplicationContext(), "로그인 성공", Toast.LENGTH_SHORT).show();
-                                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
-                                intent.putExtra("userID", userID);
-                                intent.putExtra("userPassword", userPassword1);
-                                startActivity(intent);
-
-                            } else {
-                                Toast.makeText(getApplicationContext(), "로그인 실패", Toast.LENGTH_SHORT).show();
-                                return;
-                            }
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                    }
-                };
-
-                LoginRequest loginRequest = new LoginRequest(userID, userPassword, reponseListener);
-                RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
-                queue.add(loginRequest);
-
+                Intent intent= new Intent(LoginActivity.this,MainActivity.class);
+                startActivity(intent);
             }
         });
+    }
 
-
+    public void clickLogin(View view) {
     }
 }

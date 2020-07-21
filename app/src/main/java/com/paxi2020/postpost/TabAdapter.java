@@ -8,26 +8,33 @@ import androidx.fragment.app.FragmentPagerAdapter;
 
 public class TabAdapter extends FragmentPagerAdapter {
 
-    Fragment[] fragment= new Fragment[2];
+    Fragment[] fragments= new Fragment[2];
     String[] tabTexts= new String[]{"예약택배","받는택배"};
+
+
     public TabAdapter(@NonNull FragmentManager fm) {
+
         super(fm);
+
+        fragments[0]= new TabFragment1();
+        fragments[1]= new TabFragment2();
+
     }
 
     @NonNull
     @Override
     public Fragment getItem(int position) {
-        return null;
+        return fragments[position];
     }
 
     @Override
     public int getCount() {
-        return 0;
+        return fragments.length;
     }
 
     @Nullable
     @Override
     public CharSequence getPageTitle(int position) {
-        return super.getPageTitle(position);
+        return tabTexts[position];
     }
 }

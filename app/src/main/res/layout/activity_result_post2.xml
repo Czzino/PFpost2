@@ -411,13 +411,18 @@
             android:textColor="#FF000000"/>
 
         <View
-            android:layout_width="350dp"
-            android:layout_height="1dp"
+            android:layout_width="313dp"
+            android:layout_height="0dp"
+            android:layout_below="@+id/tv_text2"
             android:layout_centerHorizontal="true"
-            android:layout_margin="5dp"
-            android:background="#FFAAAAAA"
 
-            android:layout_below="@+id/tv_text2"/>
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:background="#FFAAAAAA" />
         <TextView
             android:id="@+id/tv_date3"
             android:layout_width="100dp"

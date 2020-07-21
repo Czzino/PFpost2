@@ -7,16 +7,57 @@
     android:id="@+id/drawer_layout"
     tools:context=".PostFragment1">
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        android:background="#DDD2D2">
 
-        <com.google.android.material.appbar.AppBarLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="#5D5D5D"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="20dp"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:id="@+id/rela_tab"
+            android:layout_marginTop="50dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_below="@+id/toolbar">
+
+
+            <com.google.android.material.tabs.TabLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:tabBackground="@drawable/tab_color_serlector"
+                app:tabSelectedTextColor="#FFFFFFFF"
+                app:tabIndicatorColor="#F15454"
+                app:tabTextColor="#F15454"
+                android:id="@+id/tab_layout">
+
+            </com.google.android.material.tabs.TabLayout>
+
+        </RelativeLayout>
+
+        <androidx.viewpager.widget.ViewPager
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:theme="@style/AppTheme"/>
+            android:layout_margin="30dp"
+            android:background="@color/colorAccent"
+            android:layout_below="@+id/rela_tab"
+            android:id="@+id/view_pager">
+        </androidx.viewpager.widget.ViewPager>
 
-    </LinearLayout>
+
+    </RelativeLayout>
 
 </androidx.drawerlayout.widget.DrawerLayout>

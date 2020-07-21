@@ -1,5 +1,7 @@
 package com.paxi2020.postpost;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,4 +23,30 @@ public class PostFragment3 extends Fragment {
 
 
     }
+
+    public void click11st(View view) {
+        Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse("http://11st.co.kr"));
+        startActivity(intent);
+    }
+
+    public void clickHmall(View view) {
+        Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse("http://hyundaihmall.com"));
+        startActivity(intent);
+    }
+
+    public void clickSmall(View view) {
+        Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse("http://shinsegaemall.ssg.com"));
+        startActivity(intent);
+    }
+
+    public void clickLotte(View view) {
+        Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse("http://lotteimall.com"));
+        startActivity(intent);
+    }
+
+    public void clickAuction(View view) {
+        Intent intent= new Intent(Intent.ACTION_VIEW, Uri.parse("http://auction.co.kr"));
+        startActivity(intent);
+    }
+
 }

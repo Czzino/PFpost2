@@ -47,7 +47,7 @@ public class LoginActivity extends AppCompatActivity {
 //        drawerLayout=findViewById(R.id.dr);
 
         Toolbar toolbar= (Toolbar)findViewById(R.id.toolbar);
-        toolbar.setTitle("로 그 인");
+        toolbar.setTitle("로그인");
         setSupportActionBar(toolbar);
 
 

@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         String imgUrl= "https://w7.pngwing.com/pngs/935/151/png-transparent-man-riding-motor-scooter-delivery-courier-express-by-bike-freight-transport-mode-of-transport-motorcycle-thumbnail.png";
         Glide.with(this).load(imgUrl).into(iv);
 
-//        drawerLayout=findViewById(R.id.dr);
+        drawerLayout=findViewById(R.id.drawer_layout);
 
         Toolbar toolbar= (Toolbar)findViewById(R.id.toolbar);
         toolbar.setTitle("로그인");

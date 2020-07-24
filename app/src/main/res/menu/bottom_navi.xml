@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <item android:id="@+id/menu_lookpost"
+    <item android:id="@+id/menu_post1"
         android:title="배송조회"
         android:icon="@drawable/look"/>
-    <item android:id="@+id/menu_shopping"
-        android:title="쇼핑몰"
-        android:icon="@drawable/shopping"/>
-    <item android:id="@+id/menu_searchpost"
+    <item android:id="@+id/menu_post2"
         android:title="택배조회"
         android:icon="@drawable/search"/>
-    <item android:id="@+id/menu_booking"
+    <item android:id="@+id/menu_post3"
+        android:title="쇼핑몰"
+        android:icon="@drawable/shopping"/>
+    <item android:id="@+id/menu_post4"
         android:title="택배예약"
         android:icon="@drawable/booking">
 </item>

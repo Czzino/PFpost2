@@ -7,26 +7,32 @@
     android:id="@+id/drawer_layout"
     tools:context=".MainActivity">
 
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="#DDD2D2"
-    android:orientation="vertical">
 
-    <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="?attr/actionBarSize"
-        android:background="#5D5D5D"
-        android:theme="?attr/actionBarSize"/>
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="#F4F0F0"
+        android:layout_weight="2">
 
 
-    <FrameLayout
-        android:id="@+id/frame_container"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1">
-    </FrameLayout>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:titleTextColor="@color/colorPrimary"
+                android:theme="@style/TabTheme"/>
+
+
+
+        <LinearLayout
+            android:id="@+id/rela_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+        </LinearLayout>
+
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/bottom_nav"
@@ -36,17 +42,16 @@
             app:itemTextColor="#FFFFFFFF"
             android:background="#489CFF"
             app:labelVisibilityMode="labeled"
-            android:layout_alignParentBottom="true"
             app:menu="@menu/bottom_navi" />
 
-</LinearLayout>
+    </LinearLayout>
     <com.google.android.material.navigation.NavigationView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
         android:id="@+id/nav"
-        app:menu="@menu/drawer_navi"
+        android:layout_width="260dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
         app:headerLayout="@layout/drawer_header"
-        android:layout_gravity="start"/>
+        app:menu="@menu/drawer_navi" />
 
 
 </androidx.drawerlayout.widget.DrawerLayout>

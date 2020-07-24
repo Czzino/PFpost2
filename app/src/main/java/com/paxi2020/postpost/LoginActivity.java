@@ -40,26 +40,17 @@ public class LoginActivity extends AppCompatActivity {
         et_userid = findViewById(R.id.et_id);
         et_pw = findViewById(R.id.et_password);
 
-        iv=findViewById(R.id.iv);
-        String imgUrl= "https://w7.pngwing.com/pngs/935/151/png-transparent-man-riding-motor-scooter-delivery-courier-express-by-bike-freight-transport-mode-of-transport-motorcycle-thumbnail.png";
-        Glide.with(this).load(imgUrl).into(iv);
+//        iv=findViewById(R.id.iv);
+//        String imgUrl= "https://w7.pngwing.com/pngs/935/151/png-transparent-man-riding-motor-scooter-delivery-courier-express-by-bike-freight-transport-mode-of-transport-motorcycle-thumbnail.png";
+//        Glide.with(this).load(imgUrl).into(iv);
+//
+//        drawerLayout=findViewById(R.id.drawer_layout);
+//
+//        Toolbar toolbar= (Toolbar)findViewById(R.id.toolbar);
+//        toolbar.setTitle("로그인");
+//        setSupportActionBar(toolbar);
+//
+//
 
-        drawerLayout=findViewById(R.id.drawer_layout);
-
-        Toolbar toolbar= (Toolbar)findViewById(R.id.toolbar);
-        toolbar.setTitle("로그인");
-        setSupportActionBar(toolbar);
-
-
-
-        btn_login = findViewById(R.id.btn_login);
-
-        btn_login.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(LoginActivity.this,MainActivity.class);
-                startActivity(intent);
-            }
-        });
     }
 }

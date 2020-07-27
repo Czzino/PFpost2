@@ -5,18 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="5dp"
+    android:background="#F4F0F0"
     tools:context=".PostFragment1">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="15dp"
-        android:background="@drawable/shop_shape">
+        android:background="@drawable/shape_shop">
 
     <ImageView
         android:id="@+id/iv_llst"
         android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:src="@drawable/llst"/>
 
         <View
@@ -31,7 +32,7 @@
         <TextView
             android:id="@+id/tv_llst"
             android:layout_width="170dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:text="11번가"
             android:textSize="20sp"
             android:textStyle="bold"
@@ -40,19 +41,20 @@
         <Button
             android:id="@+id/btn_llst"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_toRightOf="@+id/tv_llst"
             android:background="@drawable/ic_home_blue_24dp"/>
         <ImageView
             android:id="@+id/iv_hmall"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@id/iv_llst"
+            android:layout_below="@id/v1"
             android:src="@drawable/hmall"/>
 
 
         <View
+            android:id="@+id/v2"
             android:layout_width="350dp"
             android:layout_height="1dp"
             android:layout_centerHorizontal="true"
@@ -63,32 +65,33 @@
         <TextView
             android:id="@+id/tv_hmall"
             android:layout_width="170dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:text="현대/Hmall"
             android:layout_marginTop="20dp"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_toRightOf="@+id/iv_hmall"
-            android:layout_below="@+id/tv_llst"
+            android:layout_below="@+id/v1"
             android:gravity="center"/>
         <Button
             android:id="@+id/btn_hmall"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_toRightOf="@+id/tv_hmall"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/btn_llst"
+            android:layout_below="@+id/v1"
             android:background="@drawable/ic_home_blue_24dp"/>
         <ImageView
             android:id="@+id/iv_sinsaegye"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/iv_hmall"
+            android:layout_below="@+id/v2"
             android:src="@drawable/sinsaegye"/>
 
 
         <View
+            android:id="@+id/v3"
             android:layout_width="350dp"
             android:layout_height="1dp"
             android:layout_centerHorizontal="true"
@@ -99,9 +102,9 @@
         <TextView
             android:id="@+id/tv_sinsaegye"
             android:layout_width="170dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:text="신세계몰/이마트"
-            android:layout_below="@+id/tv_hmall"
+            android:layout_below="@+id/v2"
             android:layout_marginTop="20dp"
             android:textSize="19sp"
             android:textStyle="bold"
@@ -110,21 +113,22 @@
         <Button
             android:id="@+id/btn_sinsaegye"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_below="@+id/btn_hmall"
+            android:layout_height="80dp"
+            android:layout_below="@+id/v2"
             android:layout_marginTop="20dp"
             android:layout_toRightOf="@+id/tv_llst"
             android:background="@drawable/ic_home_blue_24dp"/>
         <ImageView
             android:id="@+id/iv_lotte"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_marginTop="20dp"
-            android:layout_below="@+id/iv_sinsaegye"
+            android:layout_below="@+id/v3"
             android:src="@drawable/lotte"/>
 
 
         <View
+            android:id="@+id/v4"
             android:layout_width="350dp"
             android:layout_height="1dp"
             android:layout_centerHorizontal="true"
@@ -135,28 +139,29 @@
         <TextView
             android:id="@+id/tv_lotte"
             android:layout_width="170dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:text="롯데닷컴"
             android:layout_marginTop="20dp"
             android:textSize="20sp"
-            android:layout_below="@+id/tv_sinsaegye"
+            android:layout_below="@+id/v3"
             android:textStyle="bold"
             android:layout_toRightOf="@+id/iv_llst"
             android:gravity="center"/>
+
         <Button
             android:id="@+id/btn_lotte"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_below="@+id/btn_sinsaegye"
-            android:layout_marginTop="20dp"
+            android:layout_height="80dp"
             android:layout_toRightOf="@+id/tv_llst"
-            android:background="@drawable/ic_home_blue_24dp"/>
+            android:layout_below="@id/v3"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/ic_home_blue_24dp" />
         <ImageView
             android:id="@+id/iv_auction"
             android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:layout_marginTop="15dp"
-            android:layout_below="@+id/iv_lotte"
+            android:layout_below="@+id/v4"
             android:src="@drawable/auction"/>
 
 
@@ -171,19 +176,19 @@
         <TextView
             android:id="@+id/tv_auction"
             android:layout_width="170dp"
-            android:layout_height="100dp"
+            android:layout_height="80dp"
             android:text="옥션"
             android:textSize="20sp"
             android:textStyle="bold"
             android:layout_marginTop="15dp"
-            android:layout_below="@+id/tv_lotte"
+            android:layout_below="@+id/v4"
             android:layout_toRightOf="@+id/iv_llst"
             android:gravity="center"/>
         <Button
             android:id="@+id/btn_action"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_below="@+id/btn_lotte"
+            android:layout_height="80dp"
+            android:layout_below="@+id/v4"
             android:layout_marginTop="15dp"
             android:layout_toRightOf="@+id/tv_auction"
             android:background="@drawable/ic_home_blue_24dp"/>

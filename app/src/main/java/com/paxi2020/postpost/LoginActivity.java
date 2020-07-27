@@ -51,6 +51,11 @@ public class LoginActivity extends AppCompatActivity {
 //        setSupportActionBar(toolbar);
 //
 //
+    }
 
+    public void clickLogin(View view) {
+
+        Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+        startActivity(intent);
     }
 }

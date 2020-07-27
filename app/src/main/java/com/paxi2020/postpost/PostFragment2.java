@@ -16,16 +16,25 @@ import androidx.fragment.app.Fragment;
 
 public class PostFragment2 extends Fragment {
 
-    Spinner spn;
-    ArrayAdapter arrayAdapter;
+    Spinner spinner;
+
+    ArrayAdapter adapter;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        spn=getView().findViewById(R.id.spinner);
-
 
         View view = inflater.inflate(R.layout.activity_post_fragment2,container,false);
+
+        spinner= view.findViewById(R.id.spinner);
+
+        //대량의 데이터들을 뷰들로 만들어주는 객체생성
+        adapter= ArrayAdapter.createFromResource(getActivity(),R.array.arrays,R.layout.dropdown_selected);
+        spinner.setAdapter(adapter);
+
+        // TExtview의 디자인 변경
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
         return view;
     }
 

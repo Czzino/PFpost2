@@ -5,10 +5,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#F4F0F0"
     tools:context=".BookingCheck">
 
     <TextView
-        android:id="@+id/tv_container_1"
+        android:id="@+id/tv_container1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -20,7 +21,7 @@
 
     <RelativeLayout
         android:id="@+id/rela1"
-        android:layout_below="@+id/tv_request"
+        android:layout_below="@+id/tv_container1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
@@ -143,7 +144,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/tv_container_1"
+        android:id="@+id/tv_container2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
@@ -155,7 +156,7 @@
 
     <RelativeLayout
         android:id="@+id/rela2"
-        android:layout_below="@+id/tv_request"
+        android:layout_below="@+id/tv_container2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"

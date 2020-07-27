@@ -1,76 +1,332 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".TabFragment1">
 
-        <TextView
-            android:id="@+id/tv_company"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:layout_margin="4dp"
-            android:text="CJ대한통운"
-            android:gravity="center"
-            android:textStyle="bold"
-            android:textSize="20sp"/>
 
-
-        <TextView
-            android:id="@+id/tv_goods"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:text="macbook"
-            android:gravity="center"
-            android:layout_marginTop="3dp"
-            android:layout_marginLeft="4dp"
-            android:layout_below="@+id/tv_company"
-            android:textStyle="bold"
-            android:textSize="17sp"/>
-
-        <TextView
-            android:id="@+id/tv_num"
-            android:layout_width="120dp"
-            android:layout_height="wrap_content"
-            android:textSize="14sp"
-            android:gravity="center"
-            android:layout_marginLeft="4dp"
-            android:layout_below="@id/tv_goods"
-            android:text="344056120884"/>
-
-        <TextView
-            android:id="@+id/tv_from"
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/tv_goods"
-            android:gravity="center_vertical"
-            android:layout_marginLeft="20dp"
-            android:text="From : 블*"
-            android:textSize="17sp"
-            android:layout_alignBottom="@+id/tv_goods"/>
-
-        <TextView
-            android:id="@+id/tv_to"
-            android:layout_width="90dp"
-            android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/tv_num"
-            android:layout_marginLeft="20dp"
-            android:gravity="center_vertical"
-            android:text="To : 박*"
-            android:textSize="17sp"
-            android:layout_alignBottom="@+id/tv_num"/>
-
-        <TextView
+        <RelativeLayout
+            android:id="@+id/rela1"
+            android:backgroundTint="#FFFFFFFF"
+            android:background="@drawable/shape_line"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="배달완료"
-            android:textStyle="bold"
-            android:textColor="#FF000000"
-            android:textSize="20sp"
-            android:layout_toRightOf="@id/tv_from"
-            android:layout_alignTop="@+id/tv_from"
-            android:layout_alignBottom="@+id/tv_to"
-            android:gravity="center"/>
+            android:layout_height="wrap_content">
 
-</RelativeLayout>
+                <TextView
+                    android:id="@+id/tv_company"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="CJ대한통운"
+                    android:textColor="#FF000000"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_goods"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="삼성노트북17인치"
+                    android:gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_below="@+id/tv_company"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_num"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="#F4F0F0"
+                    android:layout_below="@id/tv_goods"
+                    android:text="344056120884"/>
+
+                <TextView
+                    android:id="@+id/tv_from"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_goods"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="From : 블*"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_alignBottom="@+id/tv_goods"/>
+
+                <TextView
+                    android:id="@+id/tv_to"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_num"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:text="To : 박*"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_alignBottom="@+id/tv_num"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="배달완료"
+                    android:textStyle="bold"
+                    android:textColor="#489CFF"
+                    android:textSize="20sp"
+                    android:layout_toRightOf="@id/tv_from"
+                    android:layout_alignTop="@+id/tv_from"
+                    android:layout_alignBottom="@+id/tv_to"
+                    android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela2"
+            android:backgroundTint="#FFFFFFFF"
+            android:background="@drawable/shape_line"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_company2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="한진택배"
+                    android:textColor="#FF000000"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_goods2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="덴탈마스크50매"
+                    android:gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_below="@+id/tv_company2"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_num2"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_goods2"
+                    android:layout_marginLeft="4dp"
+                    android:layout_marginTop="0dp"
+                    android:gravity="center"
+                    android:text="473819293042"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/tv_from2"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_goods2"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="From : 미래*"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_alignBottom="@+id/tv_goods2"/>
+
+                <TextView
+                    android:id="@+id/tv_to2"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_num2"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:textStyle="bold"
+                    android:text="To : 최*"
+                    android:textSize="17sp"
+                    android:layout_alignBottom="@+id/tv_num2"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="배달완료"
+                    android:textStyle="bold"
+                    android:textColor="#489CFF"
+                    android:textSize="20sp"
+                    android:layout_toRightOf="@id/tv_from2"
+                    android:layout_alignTop="@+id/tv_from2"
+                    android:layout_alignBottom="@+id/tv_to2"
+                    android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela3"
+            android:backgroundTint="#FFFFFFFF"
+            android:background="@drawable/shape_line"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_company3"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="CU편의점택배"
+                    android:textColor="#FF000000"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_goods3"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="와이드청바지진청"
+                    android:gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_below="@+id/tv_company3"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_num3"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:layout_below="@id/tv_goods3"
+                    android:text="123385738204"/>
+
+                <TextView
+                    android:id="@+id/tv_from3"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_goods3"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="From : 머시*"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_alignBottom="@+id/tv_goods3"/>
+
+                <TextView
+                    android:id="@+id/tv_to3"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_num3"
+                    android:layout_marginLeft="20dp"
+                    android:gravity="center_vertical"
+                    android:text="To : 김*"
+                    android:textSize="17sp"
+                    android:textStyle="bold"
+                    android:layout_alignBottom="@+id/tv_num3"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="배달완료"
+                    android:textStyle="bold"
+                    android:textColor="#489CFF"
+                    android:textSize="20sp"
+                    android:layout_toRightOf="@id/tv_from3"
+                    android:layout_alignTop="@+id/tv_from3"
+                    android:layout_alignBottom="@+id/tv_to3"
+                    android:gravity="center"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rela4"
+            android:backgroundTint="#FFFFFFFF"
+            android:background="@drawable/shape_line"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/tv_company4"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="4dp"
+                    android:text="우체국택배"
+                    android:textColor="#FF000000"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+
+                <TextView
+                    android:id="@+id/tv_goods4"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:text="농심신라면5개입x2"
+                    android:gravity="center"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginLeft="4dp"
+                    android:layout_below="@+id/tv_company4"
+                    android:textStyle="bold"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_num4"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:gravity="center"
+                    android:layout_marginLeft="4dp"
+                    android:layout_below="@id/tv_goods4"
+                    android:text="643611183229"/>
+
+                <TextView
+                    android:id="@+id/tv_from4"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/tv_goods4"
+                    android:gravity="center_vertical"
+                    android:layout_marginLeft="20dp"
+                    android:text="From : 11*"
+                    android:textStyle="bold"
+                    android:textSize="17sp"
+                    android:layout_alignBottom="@+id/tv_goods4"/>
+
+                <TextView
+                    android:id="@+id/tv_to4"
+                    android:layout_width="110dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_num4"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@+id/tv_num4"
+                    android:gravity="center_vertical"
+                    android:text="To : 강*"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="배달완료"
+                    android:textStyle="bold"
+                    android:textColor="#489CFF"
+                    android:textSize="20sp"
+                    android:layout_toRightOf="@id/tv_from4"
+                    android:layout_alignTop="@+id/tv_from4"
+                    android:layout_alignBottom="@+id/tv_to4"
+                    android:gravity="center"/>
+
+        </RelativeLayout>
+
+</LinearLayout>

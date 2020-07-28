@@ -2,6 +2,7 @@ package com.paxi2020.postpost;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
@@ -85,14 +86,27 @@ public class MainActivity extends AppCompatActivity {
         navi=findViewById(R.id.nav);
         navi.setItemIconTintList(null);
 
-        Toolbar toolbar= (Toolbar)findViewById(R.id.toolbar);
-        toolbar.setTitle("배송조회 페이지 입니다");
-        setSupportActionBar(toolbar);
-
-
-
-    }
+//        Toolbar toolbar= findViewById(R.id.toolbar);
+//        setSupportActionBar(toolbar);
+//
+//        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
     }
+
+//    @Override
+//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+//
+//        switch (item.getItemId()){
+//            case android.R.id.home:{
+//                finish();
+//                return true;
+//            }
+//        }
+//
+//        return super.onOptionsItemSelected(item);
+//
+//
+//    }
+}
 
 

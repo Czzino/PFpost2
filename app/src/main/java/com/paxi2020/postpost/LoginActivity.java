@@ -37,25 +37,16 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        et_userid = findViewById(R.id.et_id);
-        et_pw = findViewById(R.id.et_password);
-
-//        iv=findViewById(R.id.iv);
-//        String imgUrl= "https://w7.pngwing.com/pngs/935/151/png-transparent-man-riding-motor-scooter-delivery-courier-express-by-bike-freight-transport-mode-of-transport-motorcycle-thumbnail.png";
-//        Glide.with(this).load(imgUrl).into(iv);
-//
-//        drawerLayout=findViewById(R.id.drawer_layout);
-//
-//        Toolbar toolbar= (Toolbar)findViewById(R.id.toolbar);
-//        toolbar.setTitle("로그인");
-//        setSupportActionBar(toolbar);
-//
-//
     }
 
     public void clickLogin(View view) {
 
         Intent intent=new Intent(LoginActivity.this,MainActivity.class);
+        startActivity(intent);
+    }
+
+    public void clickRegister(View view) {
+        Intent intent=new Intent(LoginActivity.this, RegisterActivity.class);
         startActivity(intent);
     }
 }

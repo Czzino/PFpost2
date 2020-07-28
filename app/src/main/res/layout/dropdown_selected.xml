@@ -5,5 +5,6 @@
     android:text="busan"
     android:textColor="#FF000000"
     android:padding="8dp"
-    android:textSize="15sp">
+    android:gravity="center"
+    android:textSize="20sp">
 </TextView>

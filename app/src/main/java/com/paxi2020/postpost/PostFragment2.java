@@ -8,10 +8,13 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.appcompat.widget.Toolbar;
 import androidx.fragment.app.Fragment;
 
 public class PostFragment2 extends Fragment {
@@ -19,6 +22,8 @@ public class PostFragment2 extends Fragment {
     Spinner spinner;
 
     ArrayAdapter adapter;
+
+    Button button;
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -35,7 +40,19 @@ public class PostFragment2 extends Fragment {
         // TExtview의 디자인 변경
         adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
+
+
+        Button button= view.findViewById(R.id.btn_search);
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent= new Intent(getActivity(),MainActivity.class);
+            }
+        });
+
         return view;
+
+
     }
 
 }

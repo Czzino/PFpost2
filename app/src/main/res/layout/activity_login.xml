@@ -5,15 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#87001A9C"
+    android:background="#2476A6"
     tools:context=".LoginActivity">
 
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="16dp"
-            android:background="@drawable/shape_line">
+            android:layout_height="match_parent">
 
 
             <TextView
@@ -37,14 +35,14 @@
             <RelativeLayout
                 android:id="@+id/rela1"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_above="@+id/v1">
 
                 <ImageView
                     android:id="@+id/iv_id"
-                    android:layout_width="100dp"
+                    android:layout_width="75dp"
                     android:layout_height="80dp"
                     android:padding="16dp"
                     android:backgroundTint="@color/colorPassword"
@@ -55,8 +53,9 @@
                     android:id="@+id/et_id"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:hint="  아이디를 입력하세요"
+                    android:hint="아이디를 입력하세요"
                     android:layout_toRightOf="@+id/iv_id"
+                    android:paddingLeft="10dp"
                     android:backgroundTint="#FFFFFFFF"
                     android:background="@drawable/shape_line4"
                     android:gravity="center_vertical"/>
@@ -68,14 +67,14 @@
             <RelativeLayout
                 android:id="@+id/rela2"
                 android:layout_width="match_parent"
-                android:layout_height="80dp"
+                android:layout_height="70dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:layout_below="@id/v1">
 
                 <ImageView
                     android:id="@+id/iv_pass"
-                    android:layout_width="100dp"
+                    android:layout_width="75dp"
                     android:layout_height="80dp"
                     android:background="@drawable/shape_line3"
                     android:backgroundTint="@color/colorPassword"
@@ -88,10 +87,11 @@
                     android:layout_height="match_parent"
                     android:layout_alignParentBottom="true"
                     android:layout_toRightOf="@+id/iv_pass"
+                    android:paddingLeft="10dp"
                     android:background="@drawable/shape_line5"
                     android:backgroundTint="#FFFFFFFF"
                     android:gravity="center_vertical"
-                    android:hint="  패스워드를 입력하세요" />
+                    android:hint="패스워드를 입력하세요" />
 
 
             </RelativeLayout>
@@ -99,11 +99,11 @@
             <Button
                 android:id="@+id/btn_login"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="55dp"
                 android:background="@drawable/shape_line6"
                 android:backgroundTint="@color/colorPassword"
                 android:layout_below="@+id/rela2"
-                android:layout_marginTop="30dp"
+                android:layout_marginTop="60dp"
                 android:layout_marginLeft="40dp"
                 android:layout_marginRight="40dp"
                 android:text="로 그 인"
@@ -114,7 +114,7 @@
             <Button
                 android:id="@+id/btn_register"
                 android:layout_width="match_parent"
-                android:layout_height="70dp"
+                android:layout_height="55dp"
                 android:background="@drawable/shape_line6"
                 android:backgroundTint="@color/colorPassword"
                 android:layout_below="@+id/btn_login"

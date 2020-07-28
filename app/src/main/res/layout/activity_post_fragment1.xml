@@ -23,6 +23,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 app:tabTextColor="#F57F17"
+                app:tabSelectedTextColor="#FFFFFFFF"
+                app:tabBackground="@drawable/tab_color_serlector"
                 android:paddingLeft="20dp"
                 android:background="#FFFFFFFF"
                 android:theme="@style/TabTheme"/>

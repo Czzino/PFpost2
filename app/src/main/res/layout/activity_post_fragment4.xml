@@ -8,23 +8,23 @@
     android:background="#F4F0F0"
     tools:context=".PostFragment4">
 
-    <LinearLayout
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-
-    <com.google.android.material.appbar.AppBarLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#489CFF"
         android:theme="@style/TabTheme">
 
-        <androidx.appcompat.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="택배예약"
+            android:layout_gravity="center"
+            android:textColor="#FFFFFFFF"
+            android:textSize="20sp"
+            android:textStyle="bold"/>
+    </androidx.appcompat.widget.Toolbar>
 
-    </com.google.android.material.appbar.AppBarLayout>
 
     <TextView
         android:id="@+id/tv_request"
@@ -33,7 +33,7 @@
         android:text="보내는분"
         android:textStyle="bold"
         android:textColor="#4E5554"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="20dp"
         android:layout_marginLeft="30dp"
         android:layout_marginBottom="8dp"
         android:textSize="20sp"/>
@@ -44,6 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
+        android:backgroundTint="#FFFFFFFF"
         android:layout_marginRight="16dp"
         android:background="@drawable/shape_line">
 
@@ -76,8 +77,8 @@
         <TextView
             android:id="@+id/tv_phoneNumber"
             android:layout_width="100dp"
-            android:layout_height="35dp"
-            android:layout_below="@+id/tv_name"
+            android:layout_height="36dp"
+            android:layout_below="@+id/v1"
             android:textColor="#F16B23"
             android:textSize="15sp"
             android:text="전화 번호"
@@ -161,7 +162,7 @@
         <TextView
             android:id="@+id/tv_message"
             android:layout_width="100dp"
-            android:layout_height="35dp"
+            android:layout_height="36dp"
             android:layout_below="@+id/v4"
             android:textColor="#F16B23"
             android:textSize="15sp"
@@ -171,12 +172,12 @@
         <EditText
             android:id="@+id/et_message2"
             android:layout_width="match_parent"
-            android:layout_height="35dp"
+            android:layout_height="36dp"
             android:maxLines="1"
             android:textSize="15sp"
             android:background="@null"
             android:layout_alignBottom="@+id/tv_message"
-            android:layout_below="@+id/et_message"
+            android:layout_below="@+id/v4"
             android:layout_toRightOf="@id/tv_message"/>
 
     </RelativeLayout>
@@ -193,6 +194,8 @@
         android:textStyle="bold"
         android:textColor="#4E5554"
         android:textSize="20sp"/>
+
+
     <RelativeLayout
         android:id="@+id/rela2"
         android:layout_below="@+id/tv_response"
@@ -200,7 +203,9 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:backgroundTint="#FFFFFFFF"
         android:background="@drawable/shape_line">
+
         <TextView
             android:id="@+id/tv_name2"
             android:layout_width="100dp"
@@ -229,8 +234,8 @@
         <TextView
             android:id="@+id/tv_phoneNumber2"
             android:layout_width="100dp"
-            android:layout_height="35dp"
-            android:layout_below="@+id/tv_name2"
+            android:layout_height="36dp"
+            android:layout_below="@+id/v5"
             android:textColor="#F16B23"
             android:textSize="15sp"
             android:text="전화 번호"
@@ -243,7 +248,7 @@
             android:maxLines="1"
             android:textSize="15sp"
             android:background="@null"
-            android:layout_below="@+id/et_name2"
+            android:layout_below="@+id/v5"
             android:layout_toRightOf="@id/tv_phoneNumber2"/>
         <View
             android:id="@+id/v6"
@@ -257,7 +262,7 @@
             android:id="@+id/tv_address2"
             android:layout_width="100dp"
             android:layout_height="71dp"
-            android:layout_below="@+id/tv_phoneNumber2"
+            android:layout_below="@+id/v6"
             android:textColor="#F16B23"
             android:textSize="15sp"
             android:text="주 소"
@@ -289,22 +294,22 @@
             android:textSize="15sp"
             android:maxLines="1"
             android:background="@null"
-            android:layout_below="@+id/et_address2_1"
+            android:layout_below="@+id/v7"
             android:layout_toRightOf="@id/tv_address2"/>
     </RelativeLayout>
 
 
     <Button
         android:id="@+id/btn_apply"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
+        android:layout_width="170dp"
+        android:layout_height="50dp"
         android:text="예약 신청"
+        android:textColor="#FFFFFFFF"
         android:layout_gravity="center"
         android:layout_marginTop="40dp"
-        android:background="@color/colorAccent"
-        android:onClick="clickApply"
+        android:textSize="20sp"
+        android:background="#489CFF"
         android:layout_below="@id/rela2"/>
 
-    </LinearLayout>
 
 </LinearLayout>

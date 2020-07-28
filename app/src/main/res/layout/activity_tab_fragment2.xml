@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:padding="10dp"
     tools:context=".TabFragment1">
 
 
@@ -12,6 +13,7 @@
             android:id="@+id/rela1"
             android:backgroundTint="#FFFFFFFF"
             android:background="@drawable/shape_line"
+            android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -46,7 +48,6 @@
                     android:textSize="14sp"
                     android:gravity="center"
                     android:layout_marginLeft="4dp"
-                    android:textColor="#F4F0F0"
                     android:layout_below="@id/tv_goods"
                     android:text="344056120884"/>
 
@@ -77,9 +78,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="배달완료"
+                    android:text="상품이동중"
                     android:textStyle="bold"
-                    android:textColor="#489CFF"
+                    android:textColor="#006064"
                     android:textSize="20sp"
                     android:layout_toRightOf="@id/tv_from"
                     android:layout_alignTop="@+id/tv_from"
@@ -93,6 +94,7 @@
             android:backgroundTint="#FFFFFFFF"
             android:background="@drawable/shape_line"
             android:layout_marginTop="10dp"
+            android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -158,9 +160,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="배달완료"
+                    android:text="상품인수"
                     android:textStyle="bold"
-                    android:textColor="#489CFF"
+                    android:textColor="#F57F17"
                     android:textSize="20sp"
                     android:layout_toRightOf="@id/tv_from2"
                     android:layout_alignTop="@+id/tv_from2"
@@ -174,6 +176,7 @@
             android:backgroundTint="#FFFFFFFF"
             android:background="@drawable/shape_line"
             android:layout_marginTop="10dp"
+            android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -238,9 +241,9 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="배달완료"
+                    android:text="배송출발"
                     android:textStyle="bold"
-                    android:textColor="#489CFF"
+                    android:textColor="#E65100"
                     android:textSize="20sp"
                     android:layout_toRightOf="@id/tv_from3"
                     android:layout_alignTop="@+id/tv_from3"
@@ -254,6 +257,7 @@
             android:backgroundTint="#FFFFFFFF"
             android:background="@drawable/shape_line"
             android:layout_marginTop="10dp"
+            android:padding="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -318,7 +322,7 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="배달완료"
+                    android:text="배송완료"
                     android:textStyle="bold"
                     android:textColor="#489CFF"
                     android:textSize="20sp"

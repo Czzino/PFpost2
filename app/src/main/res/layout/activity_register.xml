@@ -1,51 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#2476A6"
+    android:orientation="vertical"
+    tools:context=".RegisterActivity">
 
-    <EditText
-        android:id="@+id/et_id"
-        android:layout_width="210dp"
+
+    <TextView
+        android:id="@+id/tv_register"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:hint="아이디"/>
+        android:text="회 원 가 입"
+        android:textSize="40sp"
+        android:textColor="#FFFFFFFF"
+        android:gravity="center"
+        android:layout_marginTop="40dp" />
 
-    <EditText
-        android:id="@+id/et_password"
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/et_id"
-        android:hint="패스워드"/>
+    <RelativeLayout
+        android:id="@+id/rela1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
 
-    <EditText
-        android:id="@+id/et_name"
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/et_password"
-        android:hint="name"/>
 
-    <EditText
-        android:id="@+id/et_email"
-        android:layout_width="210dp"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="5dp"
-        android:layout_below="@+id/et_name"
-        android:hint="E-mail"/>
 
-    <Button
-        android:id="@+id/btn_register"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:text="회원가입"
-        android:onClick="clickRegister"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/et_email"
-        android:layout_marginTop="15dp" />
+        <EditText
+            android:id="@+id/et_id"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="  아이디를 입력하세요"
+            android:backgroundTint="#FFFFFFFF"
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:background="@drawable/shape_line"/>
 
-</RelativeLayout>
+
+
+        <EditText
+            android:id="@+id/et_pass"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/shape_line"
+            android:layout_below="@id/et_id"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FFFFFFFF"
+            android:gravity="center_vertical"
+            android:hint="  패스워드를 입력하세요" />
+
+
+        <EditText
+            android:id="@+id/et_name"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:hint="  이름을 입력하세요"
+            android:backgroundTint="#FFFFFFFF"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_below="@id/et_pass"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_line"/>
+
+
+        <EditText
+            android:id="@+id/et_email"
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:background="@drawable/shape_line"
+            android:layout_below="@id/et_name"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#FFFFFFFF"
+            android:gravity="center_vertical"
+            android:hint="  이메일을 입력하세요" />
+
+
+
+
+        <Button
+            android:id="@+id/btn_register"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/shape_line6"
+            android:backgroundTint="#489CFF"
+            android:layout_below="@+id/et_email"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="회원가입"
+            android:textSize="30sp"
+            android:textColor="#FFFFFFFF"
+            android:onClick="clickRegister"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

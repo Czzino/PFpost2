@@ -22,20 +22,13 @@ import retrofit2.Retrofit;
 
 public class RegisterActivity extends AppCompatActivity {
 
-    EditText et_id, et_pw, et_name, et_email;
-    Button btn_regi;
+
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        et_id=findViewById(R.id.et_id);
-        et_pw =findViewById(R.id.et_password);
-        et_name=findViewById(R.id.et_name);
-        et_email=findViewById(R.id.et_email);
-
-        btn_regi= findViewById(R.id.btn_register);
 
     }
 

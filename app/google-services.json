@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1099022749078",
+    "firebase_url": "https://postregilogin.firebaseio.com",
+    "project_id": "postregilogin",
+    "storage_bucket": "postregilogin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1099022749078:android:ce6f8e913a3bd0c5e461b7",
+        "android_client_info": {
+          "package_name": "com.paxi2020.postpost"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1099022749078-tanp5t7ndffs3d7l3o864gv06rolvvt1.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.paxi2020.postpost",
+            "certificate_hash": "6550dd6139c164f49d9750d7407789a7bf7c69f8"
+          }
+        },
+        {
+          "client_id": "1099022749078-mce5m9c60vmec3sqaj8fa5he05ksa22k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKTlcRbxFd1nE7FUqoz0tJkZGwrbwhWoQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1099022749078-mce5m9c60vmec3sqaj8fa5he05ksa22k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

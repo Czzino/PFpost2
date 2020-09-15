@@ -16,24 +16,6 @@
         android:layout_weight="2">
 
 
-<!--            <androidx.appcompat.widget.Toolbar-->
-<!--                android:id="@+id/toolbar"-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="?attr/actionBarSize"-->
-<!--                android:background="#489CFF"-->
-<!--                android:theme="@style/TabTheme">-->
-
-<!--                <TextView-->
-<!--                    android:layout_width="wrap_content"-->
-<!--                    android:layout_height="wrap_content"-->
-<!--                    android:text="배송조회"-->
-<!--                    android:layout_gravity="center"-->
-<!--                    android:textColor="#FFFFFFFF"-->
-<!--                    android:textSize="20sp"-->
-<!--                    android:textStyle="bold"/>-->
-<!--            </androidx.appcompat.widget.Toolbar>-->
-
-
         <LinearLayout
             android:id="@+id/rela_container"
             android:layout_width="match_parent"

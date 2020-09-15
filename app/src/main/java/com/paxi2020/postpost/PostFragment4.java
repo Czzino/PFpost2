@@ -32,7 +32,7 @@ public class PostFragment4 extends Fragment {
             @Override
             public void onClick(View v) {
                 Dialog();
-                Intent intent = new Intent(getActivity(),BookingCheck.class);
+                Intent intent = new Intent(getActivity(),MainActivity.class);
                 startActivity(intent);
             }
         });
